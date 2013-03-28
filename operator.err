@@ -1,0 +1,13 @@
+In file included from /usr/include/c++/4.6/bits/stl_algobase.h:66:0,
+                 from /usr/include/c++/4.6/bits/char_traits.h:41,
+                 from /usr/include/c++/4.6/ios:41,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from operator.cpp:1:
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h：在‘std::iterator_traits<point>’的实例化中：
+operator.cpp:54:51：从此处实例化
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h:166:53: 错误： no type named ‘iterator_category’ in ‘class point’
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h:167:53: 错误： no type named ‘value_type’ in ‘class point’
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h:168:53: 错误： no type named ‘difference_type’ in ‘class point’
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h:169:53: 错误： no type named ‘pointer’ in ‘class point’
+/usr/include/c++/4.6/bits/stl_iterator_base_types.h:170:53: 错误： no type named ‘reference’ in ‘class point’
