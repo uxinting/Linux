@@ -13,11 +13,10 @@
 class AddOperatorItem : public OperatorItem
 {
 public:
-	int Precedence() const;
+	AddOperatorItem();
 	double Exec(std::stack<Item*>* s);
 
-private:
-	static int const precd;
+DECLAR_OPERATOR(AddOperatorItem)
 };
 
 

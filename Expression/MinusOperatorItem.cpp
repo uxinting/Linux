@@ -7,10 +7,11 @@
 
 #include "MinusOperatorItem.h"
 
-int const MinusOperatorItem::precd = 1;
+REGISTER_OPERATOR(-, MinusOperatorItem)
 
-int MinusOperatorItem::Precedence() const {
-	return precd;
+MinusOperatorItem::MinusOperatorItem() {
+	symbol = "-";
+	precd = 1;
 }
 
 double MinusOperatorItem::Exec(std::stack<Item*>* s) {

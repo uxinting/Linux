@@ -13,11 +13,10 @@
 class MinusOperatorItem : public OperatorItem
 {
 public:
-	int Precedence() const;
+	MinusOperatorItem();
 	double Exec(std::stack<Item*>* s);
 
-private:
-	static int const precd;
+	DECLAR_OPERATOR(MinusOperatorItem)
 };
 
 

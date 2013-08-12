@@ -7,10 +7,11 @@
 
 #include "AddOperatorItem.h"
 
-int const AddOperatorItem::precd = 1;
+REGISTER_OPERATOR(+, AddOperatorItem)
 
-int AddOperatorItem::Precedence() const {
-	return precd;
+AddOperatorItem::AddOperatorItem() {
+	symbol = "+";
+	precd = 1;
 }
 
 double AddOperatorItem::Exec(std::stack<Item*>* s) {

@@ -55,7 +55,27 @@ int OperandItem::Precedence() const {
 }
 
 //Operator Item
+RuntimeItem* RuntimeItem::pFirstItem = null;
+
+ITEM_INIT::ITEM_INIT(RuntimeItem* pNewItem) {
+		pNewItem->m_pNextItem = RuntimeItem::pFirstItem;
+		RuntimeItem::pFirstItem = pNewItem;
+}
+
+struct RuntimeItem OperatorItem::optorOperatorItem = {
+		"OperatorItem", 0x0
+};
+
+static ITEM_INIT _init_OperatorItem(&OperatorItem::optorOperatorItem);
+RuntimeItem* OperatorItem::GetRuntimeItem() const {
+	return &OperatorItem::optorOperatorItem;
+}
+
 void OperatorItem::Display() const {
 	cout << "The precedence: " << Precedence() << " The operator symbol: " << symbol << endl;
+}
+
+int OperatorItem::Precedence() const {
+	return precd;
 }
 
